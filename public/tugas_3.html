@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Fibonacci Generator</title>
+</head>
+
+<body>
+    <div class="container-fluid p-5 bg-light">
+        <div class="text-center mb-4">
+            <h1>Fibonacci Generator</h1>
+        </div>
+        <div>
+            <label for="nNumber" class="col-form-label">How many fibonacci number?</label>
+            <input type="number" name="nNumber" id="nNumber" class="form-control" placeholder="Any positive number">
+            <div id="numberwarning" class="form-text text-warning collapse">Number can't be zero or negative</div>
+        </div>
+        <button class="btn btn-primary mt-3" onclick="fiboGenerate();" id="generatebtn">Generate</button>
+    </div>
+    <div class="container-fluid p-5">
+        <h3 id="fiboHeading" class="mb-5"></h3>
+        <p id="fiboNumber"></p>
+    </div>
+
+    <script>
+        function addText(locator, text) {
+            $(locator).text(function (i, oldText) {
+                return oldText + text;
+            });
+        }
+
+        function fiboGenerate() {
+            //Get input value
+            nNumber = $("#nNumber").val();
+
+            //Reset text
+            $("#fiboNumber").text("");
+            $("#fiboHeading").text("");
+
+            //Check if number positive
+            if(nNumber <= 0){
+                $("#numberwarning").show();
+                return;
+            } else {
+                $("#numberwarning").hide();
+            }
+
+            //Set Heading
+            if (nNumber == 1) {
+                $("#fiboHeading").text("The first fibonacci numbers:");
+            } else {
+                $("#fiboHeading").text("The first " + (nNumber) + " fibonacci numbers:");
+            }
+
+            //Generate Fibonacci
+            firstNumber = 0;
+            secondNumber = 1;
+            if (nNumber >= 1) {
+                addText("#fiboNumber", firstNumber);
+            }
+            if (nNumber >= 2) {
+                addText("#fiboNumber", ", " + secondNumber);
+            }
+            for (i = 3; i <= nNumber; i++) {
+                temp = firstNumber + secondNumber;
+                addText("#fiboNumber", ", " + temp);
+                firstNumber = secondNumber;
+                secondNumber = temp;
+            }
+        }
+    </script>
+</body>
+
+</html>

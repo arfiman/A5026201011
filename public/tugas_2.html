@@ -1,0 +1,134 @@
+<html>
+<head>
+    <title>M Arif Nuriman</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Enriqueta:wght@600&family=Martel:wght@300&family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image:url("images/paper.jpg")
+        }
+        a:link {
+            color: #0000ff;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #ffcc00;
+            text-decoration: underline;
+        }
+        td {
+            text-align: right;
+            vertical-align:middle;
+            padding: 15px;
+        }
+        ul {
+            list-style-type: square;
+            padding-inline-start: 20px;
+        }
+        figure{
+            text-align: center;
+        }
+        figcaption{
+            text-decoration: overline;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        hr {
+            border-top: 5px dotted;
+            border-bottom: none;
+        }
+        footer {
+            background-color: #F7F6F2;
+            padding: 10px;
+            text-align: center;
+            width: auto;
+            height: 90px;
+        }
+        #profpic {
+            text-align: center;
+            display: block;
+            margin: 30px auto;
+            border-radius: 50%;
+            border: 3px solid #C8C6C6;
+            position: relative;
+            animation-name: movingpic;
+            animation-duration: 4s;
+        }
+        .judul{
+            text-align: center;
+            text-shadow: 4px 2px #C8C6C6;
+            margin: 30px auto 0px;
+            font-family: 'Enriqueta', serif;
+            font-variant: initial;
+        }
+        .subjudul{
+            font-family: 'Martel', serif;
+            font-weight:900;
+            font-variant: small-caps;
+            color: #4B6587;
+        }
+        .isi{
+            font-family: 'Quicksand', sans-serif;
+        }
+        .media {
+            width: 280;
+            height: 150;
+        }
+        @keyframes movingpic {
+            0%   {left:0px;}
+            25%  {left:100px}
+            50%  {left:0x;}
+            75%  {left:-50px;}
+            100% {left:0px;}
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="judul">Muhammad Arif Nuriman</h1>
+    <img id="profpic" src="images/profpic.jpg" width="150" height="150">
+    <h3 class="subjudul">Social</h3>
+    <ul class="isi">
+        <li><a href="https://www.instagram.com/arf.iman/">Instagram</a></li>
+        <li><a href="https://www.linkedin.com/in/arif-nuriman/">LinkedIn</a></li>
+    </ul>
+    <hr>
+    <h3 class="subjudul">About</h3>
+    <p class="isi">My name is Muhammad Arif Nuriman, Born in <i>Jakarta</i>, Currently live in <em>Bekasi</em>. I'm <b>19</b> years old.</p>
+    <hr>
+    <h3 class="subjudul">Education</h3>
+    <table class="isi">
+        <tr>
+            <td>2020 - Now</td>
+            <td> S1 Information Systems<br><strong>Institut Teknologi Sepuluh Nopember</strong></td>
+        </tr>
+        <tr>
+            <td>2017 - 2020</td>
+            <td>IPA<br><strong>SMAN 5 Kota Bekasi</strong></td>
+        </tr>
+    </table>
+    <hr>
+    <h3 class="subjudul">Media</h3>
+    <table class="isi">
+        <tr>
+            <td>
+                <figure>
+                    <iframe class="media" src="https://www.youtube.com/embed/QINQFxHoCsY" frameborder="0"></iframe>
+                    <figcaption><u>Information Systems Department Profile</u></figcaption>
+                </figure>
+            </td>
+            <td>
+                <figure>
+                    <img class="media" src="http://foto2.data.kemdikbud.go.id/getImage/20223044/1.jpg" alt="SMAN 5 Kota Bekasi">
+                    <figcaption><u>SMAN 5 Bekasi</u></figcaption>
+                </figure>
+            </td>
+        </tr>
+    </table>
+    <hr>
+    <footer>
+        <p class="isi">Made in Sept 2021</p>
+        <a class="isi" href="mailto:arifnuriman11@gmail.com">arifnuriman11@gmail.com</a>
+    </footer>
+</body>
+</html>
