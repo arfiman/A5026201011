@@ -15,14 +15,23 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Tugas 4
 Route::get('tugas4', function () {
     return view('tgs4');
 });
 
+//Praktikum 2
 Route::get('praktikum2', function () {
     return view('prak2');
 });
 
-Route::get('isiannama',"ViewController@showForm") ;
-Route::post('greetings',"ViewController@resultGreetings");
+// Contoh
+// Route::get('isiannama',"ViewController@showForm") ;
+// Route::post('greetings',"ViewController@resultGreetings");
 
+//ETS
+Route::get('ets', 'ViewController@showETS');
+
+//Tugas PHP
+Route::get('tgsphp', 'ViewController@showtugasPHP');
+Route::get('generatefibo', 'ViewController@generatefibo');
