@@ -35,3 +35,8 @@ Route::get('ets', 'ViewController@showETS');
 //Tugas PHP
 Route::get('tgsphp', 'ViewController@showtugasPHP');
 Route::get('generatefibo', 'ViewController@generatefibo');
+
+//route CRUD
+Route::get('/pegawai','PegawaiController@index');
+Route::get('/pegawai/tambah','PegawaiController@tambah');
+Route::post('/pegawai/store','PegawaiController@store');
