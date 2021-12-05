@@ -1,0 +1,34 @@
+.font-default{
+    font-family: 'Roboto', sans-serif;
+}
+.font-alt{
+    font-family: 'Lora', serif;
+}
+.mb-1{
+    margin-bottom: 1rem;
+}
+.mb-2{
+    margin-bottom: 2rem;
+}
+.mb-3{
+    margin-bottom: 4rem;
+}
+.mb-4{
+    margin-bottom: 6rem;
+}
+.mt-2{
+    margin-top: 2rem;
+}
+.padding-footer {
+    padding-top: 3rem;
+    padding-bottom: 2rem
+}
+.bg-gray{
+    background: #E6E6E6;
+}
+.bg-blue{
+    background-color: #5C7AEA;
+}
+.text-white{
+    color: rgb(73, 73, 73);
+}
