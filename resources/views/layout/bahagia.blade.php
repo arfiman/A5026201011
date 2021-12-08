@@ -8,21 +8,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora&family=Roboto&display=swap" rel="stylesheet">
 
-    {{-- Bootstrap 3.1.1 CSS CDN --}}
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-    <link href="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css" rel="stylesheet">
-
-    {{-- Bootstrap 3.3.1 JS CDN --}}
-	<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-
-    {{-- CDN custom untuk datetime --}}
-    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
-	<script src="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>
-
-    {{-- Jquery 2.1.1 CDN --}}
+    {{-- Jquery --}}
     <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
 
-    {{-- W3School CDN untuk Sidebar --}}
+    {{-- Bootstrap 3 --}}
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+    {{-- CDN for datetimepicker --}}
+    <link
+        href="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css"
+        rel="stylesheet">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
+    <script
+        src="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js">
+    </script>
+
+
+    {{-- CSS W3School untuk Sidebar --}}
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     {{-- JS dan CSS Local --}}
@@ -34,7 +37,7 @@
 
     {{-- Sidebar --}}
     <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
-        <h3 class="w3-bar-item">Link</h3>
+        <h3 class="w3-bar-item sidebar-head">Link</h3>
         <a href="/pegawai" class="w3-bar-item w3-button">Pegawai</a>
         <a href="/absen" class="w3-bar-item w3-button">Absen</a>
         <a href="/pendapatan" class="w3-bar-item w3-button">Pendapatan</a>
@@ -83,7 +86,7 @@
 
         {{-- Footer --}}
         <div class="padding-footer bg-gray font-alt container-fluid">
-            <p class="text-center text-white">
+            <p class="text-center text-grey">
                 Hak Cipta Oleh<br>
                 5026201011 - Muhammad Arif Nuriman
             </p>

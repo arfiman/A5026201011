@@ -9,27 +9,29 @@
 	<br/>
 	<br/>
 
-	<table border="1">
-		<tr>
-
-			<th>IDPegawai</th>
-			<th>Tanggal</th>
-			<th>Status</th>
-			<th>Opsi</th>
-		</tr>
-		@foreach($absen as $a)
-		<tr>
-
-			<td>{{ $a->IDPegawai }}</td>
-			<td>{{ $a->Tanggal }}</td>
-			<td>{{ $a->Status }}</td>
-			<td>
-				<a href="/absen/edit/{{ $a->ID }}">Edit Absensi</a>
-				|
-				<a href="/absen/hapus/{{ $a->ID }}">Delete Absensi</a>
-			</td>
-		</tr>
-		@endforeach
+	<table>
+        <thead>
+            <tr>
+                <th>IDPegawai</th>
+                <th>Tanggal</th>
+                <th>Status</th>
+                <th>Opsi</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($absen as $a)
+            <tr>
+                <td>{{ $a->IDPegawai }}</td>
+                <td>{{ $a->Tanggal }}</td>
+                <td>{{ $a->Status }}</td>
+                <td>
+                    <a href="/absen/edit/{{ $a->ID }}">Edit Absensi</a>
+                    |
+                    <a href="/absen/hapus/{{ $a->ID }}">Delete Absensi</a>
+                </td>
+            </tr>
+            @endforeach
+        </tbody>
 	</table>
     <p>
         Keterangan Status: <br>
