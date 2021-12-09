@@ -41,8 +41,7 @@
         <a href="/pegawai" class="w3-bar-item w3-button">Pegawai</a>
         <a href="/absen" class="w3-bar-item w3-button">Absen</a>
         <a href="/pendapatan" class="w3-bar-item w3-button">Pendapatan</a>
-        <a href="#" class="w3-bar-item w3-button">Minggu Depan (Coming Soon)</a>
-        <a href="#" class="w3-bar-item w3-button">Praktikum (Coming Soon)</a>
+        <a href="/mobil" class="w3-bar-item w3-button">Mobil</a>
     </div>
 
     {{-- Non-Sidebar --}}

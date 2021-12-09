@@ -13,7 +13,7 @@
 		{{ csrf_field() }}
         <div>
             ID Pegawai <br>
-            <select name="IDPegawai" id="">
+            <select class="form-control" name="IDPegawai" id="">
                 @foreach($pegawai as $pg)
                 <option value="{{ $pg -> pegawai_id }}">{{ $pg -> pegawai_nama }}</option>
                 @endforeach
@@ -21,19 +21,19 @@
             <br>
         </div>
         <div>
-            Bulan <br> <input type="number" name="Bulan" required="required"> <br/>
+            Bulan <br> <input type="number" class="form-control" name="Bulan" required="required"> <br/>
         </div>
         <div>
-            Tahun <br> <input type="text" name="Tahun" required="required" pattern="[0-9]{4}"> <br/>
+            Tahun <br> <input type="text" class="form-control" name="Tahun" required="required" pattern="[0-9]{4}"> <br/>
         </div>
         <div>
-            Gaji <br> <input type="number" name="Gaji" required="required"> <br/>
+            Gaji <br> <input type="number" class="form-control" name="Gaji" required="required"> <br/>
         </div>
         <div>
-            Tunjangan <br> <input type="number" name="Tunjangan" required="required"> <br/>
+            Tunjangan <br> <input type="number" class="form-control" name="Tunjangan" required="required"> <br/>
         </div>
         <div>
-            <input type="submit" value="Simpan Data">
+            <input type="submit" class="btn btn-primary" value="Simpan Data">
         </div>
 	</form>
 @endsection

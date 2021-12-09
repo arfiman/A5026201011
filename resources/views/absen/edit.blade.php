@@ -14,12 +14,14 @@
 		{{ csrf_field() }}
 		<input type="hidden" name="id" value="{{ $a->ID }}">
         <div>
-            IDPegawai <br>
-            <select name="idpegawai">
-                @foreach($pegawai as $p)
-                <option value="{{ $p->pegawai_id }}" @if ($p->pegawai_id === $a->IDPegawai ) selected="selected" @endif>{{ $p->pegawai_nama }}</option>
-                @endforeach
-            </select>
+            <label for="idpegawai" class="col-sm-2 control-label">IDPegawai</label>
+            <div id="idpegawai">
+                <select class="form-control" name="idpegawai">
+                    @foreach($pegawai as $p)
+                    <option value="{{ $p->pegawai_id }}" @if ($p->pegawai_id === $a->IDPegawai ) selected="selected" @endif>{{ $p->pegawai_nama }}</option>
+                    @endforeach
+                </select>
+            </div>
         </div>
         <br>
         <div class="form-group">
@@ -51,7 +53,7 @@
             <label for="javascript">Alpha</label>
         </div>
         <div>
-            <p><input type="submit" value="Simpan Data"></p>
+            <p><input class="btn btn-primary" type="submit" value="Simpan Data"></p>
         </div>
 	</form>
 	@endforeach

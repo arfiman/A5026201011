@@ -16,7 +16,7 @@
 
         <div>
             ID Pegawai <br>
-            <select name="IDPegawai">
+            <select class="form-control" name="IDPegawai">
                 @foreach($pegawai as $pg)
                 <option value="{{ $pg->pegawai_id }}" @if ($pg->pegawai_id === $p->IDPegawai ) selected="selected" @endif>{{ $pg->pegawai_nama }}</option>
                 @endforeach
@@ -24,19 +24,19 @@
             <br>
         </div>
         <div>
-            Bulan <br> <input type="number" name="Bulan" required="required" value="{{ $p->Bulan }}"> <br/>
+            Bulan <br> <input type="number" class="form-control" name="Bulan" required="required" value="{{ $p->Bulan }}"> <br/>
         </div>
         <div>
-            Tahun <br> <input type="text" name="Tahun" required="required" pattern="[0-9]{4}" value="{{ $p->Tahun }}"> <br/>
+            Tahun <br> <input type="text" class="form-control" name="Tahun" required="required" pattern="[0-9]{4}" value="{{ $p->Tahun }}"> <br/>
         </div>
         <div>
-            Gaji <br> <input type="number" name="Gaji" required="required" value="{{ $p->Gaji }}"> <br/>
+            Gaji <br> <input type="number" class="form-control" name="Gaji" required="required" value="{{ $p->Gaji }}"> <br/>
         </div>
         <div>
-            Tunjangan <br> <input type="number" name="Tunjangan" required="required" value="{{ $p->Tunjangan }}"> <br/>
+            Tunjangan <br> <input type="number" class="form-control" name="Tunjangan" required="required" value="{{ $p->Tunjangan }}"> <br/>
         </div>
         <div>
-            <input type="submit" value="Simpan Data">
+            <input type="submit" class="btn btn-primary" value="Simpan Data">
         </div>
 	</form>
 	@endforeach

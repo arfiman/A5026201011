@@ -13,19 +13,19 @@
 	<form action="/pegawai/store" method="post">
 		{{ csrf_field() }}
         <div>
-            Nama <br> <input type="text" name="nama" required="required"> <br/>
+            Nama <br> <input type="text" class="form-control" name="nama" required="required"> <br/>
         </div>
         <div>
-            Jabatan <br> <input type="text" name="jabatan" required="required"> <br/>
+            Jabatan <br> <input type="text" class="form-control" name="jabatan" required="required"> <br/>
         </div>
         <div>
-            Umur <br> <input type="number" name="umur" required="required"> <br/>
+            Umur <br> <input type="number" class="form-control" name="umur" required="required"> <br/>
         </div>
         <div>
-            Alamat <br> <textarea name="alamat" required="required"></textarea> <br/>
+            Alamat <br> <textarea class="form-control" name="alamat" required="required"></textarea> <br/>
         </div>
         <div>
-            <input type="submit" value="Simpan Data">
+            <input type="submit" class="btn btn-primary" value="Simpan Data">
         </div>
 	</form>
 @endsection

@@ -15,19 +15,19 @@
 		{{ csrf_field() }}
 		<input type="hidden" name="id" value="{{ $p->pegawai_id }}"> <br/>
         <div>
-            Nama <br> <input type="text" required="required" name="nama" value="{{ $p->pegawai_nama }}"> <br/>
+            Nama <br> <input type="text" class="form-control" required="required" name="nama" value="{{ $p->pegawai_nama }}"> <br/>
         </div>
         <div>
-            Jabatan <br> <input type="text" required="required" name="jabatan" value="{{ $p->pegawai_jabatan }}"> <br/>
+            Jabatan <br> <input type="text" class="form-control" required="required" name="jabatan" value="{{ $p->pegawai_jabatan }}"> <br/>
         </div>
         <div>
-            Umur <br> <input type="number" required="required" name="umur" value="{{ $p->pegawai_umur }}"> <br/>
+            Umur <br> <input type="number" class="form-control" required="required" name="umur" value="{{ $p->pegawai_umur }}"> <br/>
         </div>
         <div>
-            Alamat <br> <textarea required="required" name="alamat">{{ $p->pegawai_alamat }}</textarea> <br/>
+            Alamat <br> <textarea class="form-control" required="required" name="alamat">{{ $p->pegawai_alamat }}</textarea> <br/>
         </div>
         <div>
-            <input type="submit" value="Simpan Data">
+            <input type="submit" class="btn btn-primary" value="Simpan Data">
         </div>
 	</form>
 	@endforeach

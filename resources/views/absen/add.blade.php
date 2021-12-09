@@ -12,13 +12,14 @@
 	<form action="/absen/store" method="post">
 		{{ csrf_field() }}
         <div>
-            IDPegawai
-            <br>
-            <select name="idpegawai" id="">
-                @foreach($pegawai as $p)
-                <option value="{{ $p -> pegawai_id }}">{{ $p -> pegawai_nama }}</option>
-                @endforeach
-            </select>
+            <label for="idpegawai" class="col-sm-2 control-label">IDPegawai</label>
+            <div id="idpegawai">
+                <select class="form-control" name="idpegawai" id="">
+                    @foreach($pegawai as $p)
+                    <option value="{{ $p -> pegawai_id }}">{{ $p -> pegawai_nama }}</option>
+                    @endforeach
+                </select>
+            </div>
         </div>
         <br/>
 
@@ -42,7 +43,7 @@
             <label for="alpha">Alpha</label>
         </div>
         <div>
-            <p><input type="submit" value="Simpan Data"></p>
+            <p><input type="submit" class="btn btn-primary" value="Simpan Data"></p>
         </div>
 	</form>
 
