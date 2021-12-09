@@ -15,7 +15,13 @@
         <input type="hidden" name="ID" value="{{ $p->ID }}"> <br/>
 
         <div>
-            ID Pegawai <br> <input type="number" name="IDPegawai" required="required" value="{{ $p->IDPegawai }}"> <br/>
+            ID Pegawai <br>
+            <select name="IDPegawai">
+                @foreach($pegawai as $pg)
+                <option value="{{ $pg->pegawai_id }}" @if ($pg->pegawai_id === $p->IDPegawai ) selected="selected" @endif>{{ $pg->pegawai_nama }}</option>
+                @endforeach
+            </select>
+            <br>
         </div>
         <div>
             Bulan <br> <input type="number" name="Bulan" required="required" value="{{ $p->Bulan }}"> <br/>

@@ -12,7 +12,13 @@
 	<form action="/pendapatan/store" method="post">
 		{{ csrf_field() }}
         <div>
-            ID Pegawai <br> <input type="number" name="IDPegawai" required="required"> <br/>
+            ID Pegawai <br>
+            <select name="IDPegawai" id="">
+                @foreach($pegawai as $pg)
+                <option value="{{ $pg -> pegawai_id }}">{{ $pg -> pegawai_nama }}</option>
+                @endforeach
+            </select>
+            <br>
         </div>
         <div>
             Bulan <br> <input type="number" name="Bulan" required="required"> <br/>

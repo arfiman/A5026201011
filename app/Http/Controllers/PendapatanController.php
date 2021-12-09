@@ -10,15 +10,18 @@ class PendapatanController extends Controller
 {
     public function index()
     {
-    	$pendapatan = DB::table('pendapatan')->get();
+    	$pendapatan = DB::table('pendapatan')
+        ->join("pegawai", "pendapatan.IDPegawai", "=", "pegawai.pegawai_id")
+        ->select("pendapatan.*", "pegawai.pegawai_nama")
+        ->paginate();
 
     	return view('pendapatan.index',['pendapatan' => $pendapatan]);
 
     }
     public function tambah()
     {
-
-        return view('pendapatan.tambah');
+        $pegawai = DB::table('pegawai')->orderBy('pegawai_nama', 'asc')->get();
+        return view('pendapatan.tambah', ['pegawai' => $pegawai]);
 
     }
 
@@ -38,7 +41,8 @@ class PendapatanController extends Controller
     public function edit($id)
     {
         $pendapatan = DB::table('pendapatan')->where('ID',$id)->get();
-        return view('pendapatan.edit',['pendapatan' => $pendapatan]);
+        $pegawai = DB::table('pegawai')->orderBy('pegawai_nama', 'asc')->get();
+        return view('pendapatan.edit',['pendapatan' => $pendapatan, 'pegawai' => $pegawai]);
 
     }
 
